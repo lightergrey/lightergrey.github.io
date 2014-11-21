@@ -1,4 +1,3 @@
-lightergrey.github.io
-=====================
+## lightergrey.github.io
 
 Personal website
