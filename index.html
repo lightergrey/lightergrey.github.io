@@ -3,6 +3,30 @@ layout: default
 title: Home
 ---
 
-# Hello World
+{% for post in paginator.posts %}
 
-I'm hosted with GitHub Pages.
+  <article class="post listing">
+    <header class="post-header">
+      {% if post.image %}<img class="post-image" src="{{ post.image }}">{% endif %}
+      <h2 class="post-title"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
+      <time class="post-date">{{ post.date | | date: "%-d %B %Y" }}</time>
+    </header>
+    <div class="post-content">
+      {% assign content = post.content | split: '<!-- more -->' %}
+      {{ content[0] }}
+      {% if content[1] %}<a href="{{ site.url }}{{ post.url }}/#more">Read More</a>{% endif %}
+    </div>
+  </article>
+
+{% endfor %}
+
+{% if paginator.total_pages > 1 %}
+  <nav class="pagination container">
+    {% if paginator.previous_page %}
+      <a class="pagination-link newer" href="{{ paginator.previous_page_path | prepend: site.url | replace: '//', '/' }}">Newer</a>
+    {% endif %}
+    {% if paginator.next_page %}
+      <a class="pagination-link older" href="{{ paginator.next_page_path | prepend: site.url | replace: '//', '/' }}">Older</a>
+    {% endif %}
+  </nav>
+{% endif %}

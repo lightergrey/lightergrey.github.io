@@ -1,0 +1,44 @@
+/* Post
+========================================================================== */
+.post {
+  border-bottom: .125em solid #E3E3E3;
+  padding: 1em 0;
+}
+
+.post-header {
+}
+
+.post-title {
+  margin-top: 0;
+  font-size: 2em;
+  margin: 0 auto;
+}
+
+.post-date {
+  font-size: .75em;
+  font-style: italic;
+  border-bottom: none;
+}
+
+.post-image {
+}
+
+.post-content {
+  max-width: 35em;
+  margin: 0 auto;
+}
+
+.full {
+  width: 100%;
+}
+
+/* Single Post Styles */
+
+.single {
+  border-bottom: none;
+}
+
+/* List of Posts Styles */
+
+.listing {
+}

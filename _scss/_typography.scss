@@ -1,0 +1,159 @@
+/* ==========================================================================
+Typography
+========================================================================== */
+
+body {
+  background-color: $background;
+  color: $foreground;
+  font-family: 'adelle', Georgia, 'Times New Roman', Times, serif;
+  font-size: 1em;
+  line-height: 1.4;
+  width: 100%;
+}
+
+a {
+  color: $foreground;
+  border-bottom: 4px solid blue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: blue;
+}
+
+/*abbr*/
+/*address*/
+/*b*/
+
+blockquote {
+}
+
+blockquote cite {
+}
+
+/*cite*/
+
+code {
+  padding: .25em .5em;
+  font-style: normal;
+}
+
+/*del*/
+/*dfn*/
+
+/*dl*/
+/*dt*/
+/*dd*/
+
+/*em*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  line-height: 1.25;
+  text-rendering: optimizeLegibility;
+  margin: 1.5em 0 .5em;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.25em;
+}
+
+h3 {
+  font-size: 1.125em;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 1em;
+  margin: 1.5em 0 0 0;
+}
+
+hr {
+  border-bottom: 1px solid #CCCCCC;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: 1.5em 0;
+}
+
+/*i*/
+/*ins*/
+/*kbd*/
+
+/*mark*/
+
+ol {
+  list-style-type: decimal;
+  margin-bottom: 1em;
+  padding-left: 1em;
+}
+
+p {
+  margin: 1em 0;
+  max-width: 35em;
+}
+
+pre {
+  padding: 1em;
+}
+
+pre code {
+  padding: 0;
+  background-color: transparent;
+}
+
+/*q*/
+/*s*/
+/*samp*/
+
+/*small*/
+
+/*strong*/
+/*sub*/
+/*summary*/
+/*sup*/
+/*time*/
+/*u*/
+
+ul {
+  list-style-type: disc;
+  margin-bottom: 1em;
+  padding-left: 1em;
+}
+
+ul,
+ol {
+  max-width: 35.5em;
+}
+
+ul ol,
+ul ul,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+/*var*/
+
+/*::-moz-selection {
+text-shadow: none;
+}
+
+::selection {
+text-shadow: none;
+}*/
+
+img,
+figure {
+  max-width: 100%;
+}
