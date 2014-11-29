@@ -4,28 +4,40 @@ Typography
 
 body {
   background-color: $background;
-  color: $foreground;
-  font-family: 'adelle', Georgia, 'Times New Roman', Times, serif;
+  color: $grey-dark;
+  font-family: "freight-text-pro", Georgia, "Times New Roman", Times, serif;
   font-size: 1em;
   line-height: 1.4;
   width: 100%;
+
+  @include bp(medium) {
+    font-size: 1.125em;
+  }
 }
 
 a {
-  color: $foreground;
-  border-bottom: 4px solid blue;
+  color: $link;
   text-decoration: none;
 }
 
 a:hover {
-  color: blue;
+  color: $link;
+  border-bottom: 2px solid $link-highlight;
 }
 
 /*abbr*/
-/*address*/
+
+address {
+  font-style: normal;
+}
+
 /*b*/
 
 blockquote {
+  margin: 0;
+  padding: 0 0 0 1em;
+  border-left: 4px solid $grey-light;
+  color: $grey-medium;
 }
 
 blockquote cite {
@@ -34,16 +46,27 @@ blockquote cite {
 /*cite*/
 
 code {
-  padding: .25em .5em;
+  padding: .125em .25em;
   font-style: normal;
+  font-size: .875em;
+  background-color: $grey-light;
+  border-radius: .125em;
 }
 
 /*del*/
 /*dfn*/
 
 /*dl*/
-/*dt*/
-/*dd*/
+
+dt {
+  font-weight: bold;
+  font-style: italic;
+}
+
+dd {
+  margin-bottom: .5em;
+  margin-left: 1em;
+}
 
 /*em*/
 
@@ -57,18 +80,23 @@ h6 {
   line-height: 1.25;
   text-rendering: optimizeLegibility;
   margin: 1.5em 0 .5em;
+  font-family: "freight-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  a {
+    color: $grey-dark;
+  }
 }
 
 h1 {
-  font-size: 1.5em;
+  font-size: 2.25em;
 }
 
 h2 {
-  font-size: 1.25em;
+  font-size: 1.75em;
 }
 
 h3 {
-  font-size: 1.125em;
+  font-size: 1.25em;
 }
 
 h4,
@@ -79,7 +107,7 @@ h6 {
 }
 
 hr {
-  border-bottom: 1px solid #CCCCCC;
+  border-bottom: 2px solid $grey-light;
   border-left: 0;
   border-right: 0;
   border-top: 0;
@@ -88,9 +116,17 @@ hr {
 
 /*i*/
 /*ins*/
-/*kbd*/
+kbd {
+  padding: .125em .25em;
+  font-size: .875em;
+  background-color: $grey-light;
+  border-radius: .125em;
+}
 
-/*mark*/
+mark {
+  background-color: $highlight;
+  padding: .0625em .125em;
+}
 
 ol {
   list-style-type: decimal;
@@ -99,12 +135,14 @@ ol {
 }
 
 p {
-  margin: 1em 0;
+  margin: 0 0 1em 0;
   max-width: 35em;
 }
 
 pre {
   padding: 1em;
+  background-color: $grey-light;
+  border-radius: .125em;
 }
 
 pre code {
@@ -114,10 +152,15 @@ pre code {
 
 /*q*/
 /*s*/
-/*samp*/
+
+samp {
+  padding: .125em .25em;
+  font-size: .875em;
+  background-color: $grey-light;
+  border-radius: .125em;
+}
 
 /*small*/
-
 /*strong*/
 /*sub*/
 /*summary*/
@@ -156,4 +199,15 @@ text-shadow: none;
 img,
 figure {
   max-width: 100%;
+}
+
+figcaption {
+  color: $grey-medium;
+  font-style: italic;
+
+  > * {
+    font-style: italic;
+    margin-top: 0;
+    color: desaturate(lighten($grey-dark, 30%), 90%);
+  }
 }
