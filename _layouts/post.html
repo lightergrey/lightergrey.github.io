@@ -12,7 +12,7 @@ layout: default
     {% assign content = page.content | split: '<!-- more -->' %}
     {{ content[0] | markdownify }}
     {% if content[1] %}
-      <a id="more">
+      <a id="more"></a>
       {{ content[1] | markdownify }}
     {% endif %}
   </div>

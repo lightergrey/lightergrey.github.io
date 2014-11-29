@@ -1,9 +1,7 @@
 ---
 layout: post
 title:  Get Up and Run
-date:   2014-01-19
 custom-css: get-up-and-run.css
-
 ---
 
 Here’s what worked for me when I wanted to get in shape.

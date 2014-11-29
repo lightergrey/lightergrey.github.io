@@ -2,28 +2,33 @@
 
 var gulp = require('gulp'),
   browserSync = require('browser-sync'),
-  cp = require('child_process'),
   reload = browserSync.reload,
+  cp = require('child_process'),
   prefix = require('gulp-autoprefixer'),
   cssmin = require('gulp-cssmin'),
   rename = require('gulp-rename'),
   sass = require('gulp-sass');
 
-// ============================================================================
-// Tasks
-// ============================================================================
 
-gulp.task('browser-sync', function() {
+gulp.task('jekyll-build', function (done) {
+  browserSync.notify('<span style="color: grey">Running:</span> $ jekyll build');
+  return cp.spawn('jekyll', ['build','--config', '_config.yml,_config-dev.yml'], {stdio: 'inherit'})
+  .on('close', done);
+});
+
+gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
+  browserSync.reload();
+});
+
+gulp.task('browser-sync', ['jekyll-build'], function() {
   browserSync({
+    logLevel: 'info',
+    logConnections: false,
+    logFileChanges: true,
     server: {
       baseDir: '_site'
     }
   });
-});
-
-gulp.task('jekyll-serve', function (done) {
-  return cp.spawn('jekyll', ['serve', '--config','_config.yml,_config-dev.yml'], {stdio: 'inherit'})
-  .on('close', done);
 });
 
 gulp.task('sass', function () {
@@ -41,8 +46,10 @@ gulp.task('sass', function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch('_scss/*.scss', ['sass', reload]);
-  gulp.watch('_site/**/*.html', reload);
+  gulp.watch('_scss/*.scss', ['sass']);
+  gulp.watch(['index.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
-gulp.task('default', ['sass', 'jekyll-serve', 'watch', 'browser-sync']);
+gulp.task('default', ['browser-sync'], function() {
+  gulp.start('watch');
+});
