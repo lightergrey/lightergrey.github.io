@@ -9,7 +9,7 @@ url: http://lightergrey.github.io
 owner:
   name: Josh Stewart
 
-exclude: [Gemfile, Gemfile.lock, README.md]
+exclude: [Gemfile, Gemfile.lock, gulpfile.js, node_modules, package.json, README.md]
 permalink: /:title
 paginate: 5
 paginate_path: "page/:num"
