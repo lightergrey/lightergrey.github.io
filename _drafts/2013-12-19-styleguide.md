@@ -6,8 +6,24 @@ date: 2013-12-19
 
 ## Colors
 
-TK
-
+<ul class="swatch-list">
+  <li class="swatch base03">base03</li>
+  <li class="swatch base02">base02</li>
+  <li class="swatch base01">base01</li>
+  <li class="swatch base00">base00</li>
+  <li class="swatch base0">base0</li>
+  <li class="swatch base1">base1</li>
+  <li class="swatch base2">base2</li>
+  <li class="swatch base3">base3</li>
+  <li class="swatch yellow">yellow</li>
+  <li class="swatch orange">orange</li>
+  <li class="swatch red">red</li>
+  <li class="swatch magenta">magenta</li>
+  <li class="swatch violet">violet</li>
+  <li class="swatch blue">blue</li>
+  <li class="swatch cyan">cyan</li>
+  <li class="swatch green">green</li>
+</ul>
 ---
 
 ## Typefaces

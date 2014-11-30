@@ -1,29 +1,36 @@
-$base03:    #002b36;
-$base02:    #073642;
-$base01:    #586e75;
-$base00:    #657b83;
-$base0:     #839496;
-$base1:     #93a1a1;
-$base2:     #eee8d5;
-$base3:     #fdf6e3;
-$yellow:    #b58900;
-$orange:    #cb4b16;
-$red:       #dc322f;
-$magenta:   #d33682;
-$violet:    #6c71c4;
-$blue:      #268bd2;
-$cyan:      #2aa198;
-$green:     #859900;
+$base03:    hsl(195, 90, 5);
+$base02:    hsl(195, 60, 10);
+$base01:    hsl(195, 30, 25);
+$base00:    hsl(195, 20, 35);
+$base0:     hsl(195, 10, 50);
+$base1:     hsl(195, 10, 70);
+$base2:     hsl(195, 5, 87);
+$base3:     hsl(195, 5, 95);
+$yellow:    hsl(50, 86, 51);
+$orange:    hsl(30, 86, 51);
+$red:       hsl(351, 72, 51);
+$magenta:   hsl(323, 40, 49);
+$violet:    hsl(281, 43, 39);
+$blue:      hsl(191, 100, 39);
+$cyan:      hsl(176, 100, 38);
+$green:     hsl(86, 54, 51);
 
-$background:            #fff;
-$grey-dark:             $base03;
-$grey-medium:           $base01;
-$grey-light:            lighten($base1, 30%);
-
-$link:                  $blue;
-$link-highlight:        lighten($blue, 30%);
-
-$highlight:             lighten($yellow, 30%);
+.base03 { background-color: $base03; color: $base2 }
+.base02 { background-color: $base02; color: $base2 }
+.base01 { background-color: $base01; color: $base2 }
+.base00 { background-color: $base00; color: $base2 }
+.base0 { background-color: $base0 }
+.base1 { background-color: $base1 }
+.base2 { background-color: $base2 }
+.base3 { background-color: $base3 }
+.yellow { background-color: $yellow }
+.orange { background-color: $orange }
+.red { background-color: $red }
+.magenta { background-color: $magenta }
+.violet { background-color: $violet }
+.blue { background-color: $blue }
+.cyan { background-color: $cyan }
+.green   { background-color: $green }
 
 %clearfix {
   &:after {
@@ -48,4 +55,16 @@ $highlight:             lighten($yellow, 30%);
   } @else {
     @media only screen and (min-width: $size) { @content; }
   }
+}
+
+.swatch-list {
+  @extend %no-bullet;
+  @extend %clearfix;
+}
+
+.swatch {
+  width: 20%;
+  float: left;
+  padding: 1em;
+
 }

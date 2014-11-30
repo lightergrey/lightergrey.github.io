@@ -20,7 +20,7 @@ green     $green  operators, other keywords
   padding: 1em;
 }
 
-.highlight .c { color: $base01 } /* Comment */
+.highlight .c { color: $base0 } /* Comment */
 .highlight .err { color: $base1 } /* Error */
 .highlight .g { color: $base1 } /* Generic */
 .highlight .k { color: $green } /* Keyword */
@@ -29,9 +29,9 @@ green     $green  operators, other keywords
 .highlight .o { color: $green } /* Operator */
 .highlight .x { color: $orange } /* Other */
 .highlight .p { color: $base1 } /* Punctuation */
-.highlight .cm { color: $base01 } /* Comment.Multiline */
+.highlight .cm { color: $base0 } /* Comment.Multiline */
 .highlight .cp { color: $green } /* Comment.Preproc */
-.highlight .c1 { color: $base01 } /* Comment.Single */
+.highlight .c1 { color: $base0 } /* Comment.Single */
 .highlight .cs { color: $green } /* Comment.Special */
 .highlight .gd { color: $cyan } /* Generic.Deleted */
 .highlight .ge { color: $base1; font-style: italic } /* Generic.Emph */
