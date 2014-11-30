@@ -13,3 +13,4 @@ exclude: [Gemfile, Gemfile.lock, README.md]
 permalink: /:title
 paginate: 5
 paginate_path: "page/:num"
+highlighter: pygments

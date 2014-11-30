@@ -9,11 +9,6 @@ layout: default
     <time class="post-date">{{ page.date | | date: "%-d %B %Y" }}</time>
   </header>
   <div class="post-content">
-    {% assign content = page.content | split: '<!-- more -->' %}
-    {{ content[0] | markdownify }}
-    {% if content[1] %}
-      <a id="more"></a>
-      {{ content[1] | markdownify }}
-    {% endif %}
+    {{ content }}
   </div>
 </article>

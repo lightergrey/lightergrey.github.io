@@ -23,22 +23,21 @@ Secondly, why do you think things turned out the way they did? Were you surprise
 
 Finally, is this something others in your line of work are prone to miss? Is it a rookie error, or something more like an industry-wide oversight? If you’ve tried to search online for similar opinions, do you get a lot of misinformation? Or is the good information simply not in a place where others in your field are likely to see it?
 
-Stealing ideas to help get writing. http://alistapart.com/article/ and http://alistapart.com/blog/post/writing-on-writing-and-other-resources
-
-![My alt text]({{ site.url }}img/test-post-header.jpg)
+Stealing ideas to help get writing. [http://alistapart.com/article/][http://alistapart.com/article/] and [http://alistapart.com/blog/post/writing-on-writing-and-other-resources][http://alistapart.com/blog/post/writing-on-writing-and-other-resources]
 
 A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
 
 Even the all-powerful Pointing has no control about the blind texts — it is an almost unorthographic life. One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
+
 To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
 
 Jekyll also offers powerful support for code snippets:
 
 {% highlight ruby %}
 def print_hi(name)
-puts "Hi, #{name}"
+  puts "Hi, #{name}"
 end
 print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.

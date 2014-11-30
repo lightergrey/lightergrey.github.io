@@ -6,16 +6,22 @@
 }
 
 .post-header {
+  margin-bottom: 1em;
 }
 
 .post-title {
   margin: 0 auto;
+  text-align: center;
+  font-size: 2.25em;
 }
 
 .post-date {
+  display: block;
+  color: $grey-medium;
   font-size: .75em;
   font-style: italic;
-  border-bottom: none;
+  text-align: center;
+  margin-top: 1em;
 }
 
 .post-image {
@@ -24,6 +30,11 @@
 .post-content {
   max-width: 35em;
   margin: 0 auto;
+}
+
+.lead-in {
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 .full {
