@@ -2,6 +2,7 @@
 layout: post
 title:  Get Up and Run
 custom-css: get-up-and-run.css
+date: 2013-12-19
 ---
 
 Here’s what worked for me when I wanted to get in shape.

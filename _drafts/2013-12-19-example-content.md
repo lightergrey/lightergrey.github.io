@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Example Content
-categories: jekyll example
+date: 2013-12-19
 ---
 
 These are snippets and guides to actually writing.

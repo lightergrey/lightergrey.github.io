@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Work History
+date: 2013-12-19
 ---
 
 There's lots to be said about the journey that lead me here. I moved to New York in 2002 from Starkville, Mississippi where I'd lived from the third grade through the end of college. The first couple of months I lived on Jessi's couch and scrambled to find a job. Eventually I ended up at George/Gerard Design (now [hgDesign](http://hgdnyc.com)) which was a great thing to have happen to me. Hershell was more than a boss, he was a mentor.

@@ -28,7 +28,17 @@ date: 2013-12-19
 
 ## Typefaces
 
-TK
+The body copy is set in Freight Text Pro by Phil's Fonts.
+
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z  
+a b c d e f g h i j k l m n o p q r s t u v w x y z  
+1 2 3 4 5 6 7 8 9 0 & @ . , ? ! ’ “ ” ( )
+
+###### The headers are set in Freight Sans Pro by Phil's Fonts.
+
+<h6>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
+a b c d e f g h i j k l m n o p q r s t u v w x y z<br>
+1 2 3 4 5 6 7 8 9 0 & @ . , ? ! ’ “ ” ( )</h6>
 
 ---
 
