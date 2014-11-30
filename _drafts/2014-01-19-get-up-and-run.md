@@ -33,8 +33,6 @@ I lost 30 pounds. It wasn't easy to do, but the concept was simple and super str
 
 ---
 
-
-
 My Path.
 
 In 2013, my first full year as a runner, I covered about 1,455 miles total. (That's racing, training and running for fun.)

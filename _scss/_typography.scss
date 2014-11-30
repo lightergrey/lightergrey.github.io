@@ -141,11 +141,13 @@ p {
 
 pre {
   padding: 1em;
-  background-color: $grey-light;
+  background-color: $base03;
+  color: $base1;
   border-radius: .125em;
 }
 
-pre code {
+pre code,
+pre samp {
   padding: 0;
   background-color: transparent;
 }
@@ -212,4 +214,21 @@ figcaption {
   }
 }
 
-// Todo: Style forms and tables
+// Todo: Style forms
+
+th,
+td {
+  padding: .25em .75em;
+}
+
+tbody tr:nth-child(odd) {
+  background: #eee;
+}
+
+thead {
+  font-weight: bold;
+}
+
+tfoot {
+  font-style: italic;
+}

@@ -20,15 +20,6 @@ green     $green  operators, other keywords
   padding: 1em;
 }
 
-.highlight {
-  background-color: $base03;
-  color: $base1;
-  border-radius: .125em;
-
-  pre {
-    background-color: transparent;
-  }
-}
 .highlight .c { color: $base01 } /* Comment */
 .highlight .err { color: $base1 } /* Error */
 .highlight .g { color: $base1 } /* Generic */
