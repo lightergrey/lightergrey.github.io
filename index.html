@@ -9,7 +9,7 @@ title: Home
     <header class="post-header">
       {% if post.image %}<img class="post-image" src="{{ post.image }}">{% endif %}
       <h2 class="post-title"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
-      <time class="post-date">{{ post.date | | date: "%-d %B %Y" }}</time>
+      <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
     </header>
     <div class="post-content">
       {% assign content = post.content | split: '<!-- more -->' %}
