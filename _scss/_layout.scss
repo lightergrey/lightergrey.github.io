@@ -19,9 +19,24 @@ Layout
 /* Header
 ========================================================================== */
 .site-header {
+  .container {
+    padding-top: 0;
+  }
 }
 
 .site-title {
+  font-size: .875em;
+  background-color: $base3;
+  padding: 2em 1em .5em 1em;
+  line-height: 2.5;
+  font-family: "freight-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #FFFFFF;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $blue;
+    color: #FFFFFF;
+  }
 }
 
 .site-description {
@@ -51,6 +66,23 @@ Layout
 /* Site Footer
 ========================================================================== */
 .site-footer {
+}
+
+.social-list {
+  @extend %clearfix;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.social-item {
+  display: inline;
+  padding: .5em;
+}
+
+.social-link {
+  font-size: .875em;
 }
 
 .copyright {

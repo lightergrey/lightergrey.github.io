@@ -22,7 +22,7 @@ a {
 
 a:hover {
   color: $blue;
-  border-bottom: 2px solid $blue;
+  border-bottom: .125em solid $blue;
 }
 
 /*abbr*/
@@ -36,7 +36,7 @@ address {
 blockquote {
   margin: 0;
   padding: 0 0 0 1em;
-  border-left: 4px solid $base2;
+  border-left: .25em solid $base3;
   color: $base00;
 }
 
@@ -108,11 +108,12 @@ h6 {
 }
 
 hr {
-  border-bottom: 2px solid $base2;
+  border-bottom: .125em solid $base3;
   border-left: 0;
   border-right: 0;
   border-top: 0;
-  margin: 1.5em 0;
+  margin: 2em auto;
+  width: 33.333%;
 }
 
 /*i*/
