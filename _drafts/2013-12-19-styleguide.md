@@ -427,15 +427,18 @@ Figures are usually used to refer to images:
 
 ![Dog](http://lorempixum.com/240/240/abstract/?r)
 
-
 Linked Image
-
 
 [![Dog](http://lorempixum.com/240/240/abstract/?r)](#)
 
 Missing Image
 
 <img alt="This is an example of a missing image">
+
+Full Width
+
+![Full width image](http://lorempixum.com/1800/1000/abstract/?r)
+{: .full}
 
 SVG
 

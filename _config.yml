@@ -1,7 +1,7 @@
 # Title, decription, tagline and URL for your site
 # Can be used in your theme by calling 'site.title' and so on
 title: Josh Stewart
-description: personal blog
+description: The personal blog of Josh Stewart.
 url: http://lightergrey.github.io
 
 # Same as the title etc for your site but can instead be
