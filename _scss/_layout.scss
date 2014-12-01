@@ -7,11 +7,11 @@ Layout
 }
 
 /* maintains overall site width */
-.container {
-  margin: 0 auto;
-  max-width: 1000px;
-  padding: 1em;
-}
+// .container {
+//   margin: 0 auto;
+//   max-width: 1000px;
+//   padding: 1em;
+// }
 
 .main {
 }
@@ -27,15 +27,17 @@ Layout
 .site-title {
   font-size: .875em;
   background-color: $base3;
-  padding: 2em 1em .5em 1em;
+  padding: .25em 1em;
   line-height: 2.5;
   font-family: "freight-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #FFFFFF;
   text-transform: uppercase;
+  display: inline-block;
 
   &:hover {
     background-color: $blue;
     color: #FFFFFF;
+    border-bottom: none;
   }
 }
 

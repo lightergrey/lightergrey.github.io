@@ -28,16 +28,24 @@
 }
 
 .post-content {
-  max-width: 35em;
-  margin: 0 auto;
+  > div {
+    max-width: 35em;
+    margin: 0 auto 1em auto;
+    padding: 0 1em;
+  }
 }
+
 
 .lead-in {
   font-size: 1.5em;
+  max-width: 23.333333333em;
+  padding: 0 .666666667em;
 }
 
 .full {
   width: 100%;
+  max-width: 100%;
+  padding: 0;
 }
 
 /* Single Post Styles */

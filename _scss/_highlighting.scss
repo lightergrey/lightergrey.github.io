@@ -17,7 +17,11 @@ green     $green  operators, other keywords
 */
 
 .gist-syntax {
-  padding: 1em;
+  padding: 1em 0;
+}
+
+div.highlight {
+  padding: 0;
 }
 
 .highlight .c { color: $base0 } /* Comment */

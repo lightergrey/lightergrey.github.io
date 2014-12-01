@@ -268,8 +268,8 @@ John said, <q>I saw Lucy at lunch, she told me <q>Mary wants you to get some ice
 
 The `s` element is used to represent content that is no longer accurate or relevant. When indicating document edits i.e., marking a span of text as having been removed from a document, use the `del` element instead. Example:
 
-<s>Recommended retail price: £3.99 per bottle</s>  
-**Now selling for just £2.99 a bottle!**
+<p><s>Recommended retail price: £3.99 per bottle</s><br>
+<strong>Now selling for just £2.99 a bottle!</strong></p>
 
 
 ### Sample output
@@ -394,15 +394,15 @@ Forms can be used when you wish to collect data from users. The `fieldset` eleme
 
 ### Audio
 
-<audio controls="">
+<div><audio controls="">
   <source src="http://media.w3.org/2010/07/bunny/04-Death_Becomes_Fur.mp4" type="audio/mp4">
   <source src="http://media.w3.org/2010/07/bunny/04-Death_Becomes_Fur.oga" type="audio/ogg; codecs=vorbis">
 Your user agent does not support the HTML5 Audio element.
-</audio>
+</audio></div>
 
 Missing
 
-<audio controls=""></audio>
+<div><audio controls=""></audio></div>
 
 
 ### Figures
@@ -418,10 +418,9 @@ Figures are usually used to refer to images:
 </figure>
 
 <figure>
-  <img src="http://lorempixum.com/1800/1000/abstract/?r" alt="Example image">
+  <img src="http://lorempixum.com/1800/1000/abstract/?r" alt="Example image" width="900" height="500">
   <figcaption>Figcaption content</figcaption>
 </figure>
-
 
 ### Image
 
@@ -442,9 +441,11 @@ Full Width
 
 SVG
 
-<svg width="200px" height="200px">
-  <circle cx="100" cy="100" r="100" fill="#ff0000"></circle>
-</svg>
+<div>
+  <svg width="200px" height="200px">
+    <circle cx="100" cy="100" r="100" fill="#ff0000"></circle>
+  </svg>
+</div>
 
 
 ### Video
