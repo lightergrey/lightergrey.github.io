@@ -34,6 +34,9 @@ Layout
   color: $base3;
   text-transform: uppercase;
   display: inline-block;
+  border-bottom-left-radius: .125em;
+  border-bottom-right-radius: .125em;
+  margin-left: 1em;
 }
 .site-title:hover,
 .site-title:active {
