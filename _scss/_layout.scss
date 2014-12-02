@@ -24,21 +24,22 @@ Layout
   }
 }
 
-.site-title {
+.site-title,
+.site-title:visited {
   font-size: .875em;
-  background-color: $base3;
+  background-color: $base2;
   padding: .25em 1em;
   line-height: 2.5;
   font-family: "freight-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #FFFFFF;
+  color: $base3;
   text-transform: uppercase;
   display: inline-block;
-
-  &:hover {
-    background-color: $blue;
-    color: #FFFFFF;
-    border-bottom: none;
-  }
+}
+.site-title:hover,
+.site-title:active {
+  background-color: $blue;
+  color: #FFFFFF;
+  border-bottom: none;
 }
 
 .site-description {
@@ -62,6 +63,33 @@ Layout
 }
 
 .pagination {
+  max-width: 33em;
+  margin: 2em auto 0;
+  @extend %clearfix;
+
+  &-link:link,
+  &-link:visited {
+    border-radius: .125em;
+    background-color: $base2;
+    color: #FFFFFF;
+    padding: .25em 1em;
+    font-family: "freight-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  &-link:hover,
+  &-link:active {
+    border-bottom: none;
+    color: #FFFFFF;
+    background-color: $blue;
+  }
+
+  .older {
+    float: left;
+  }
+
+  .newer {
+    float: right
+  }
 }
 
 
@@ -72,7 +100,7 @@ Layout
 
 .social-list {
   @extend %clearfix;
-  margin: 0 auto;
+  margin: 1em auto 0;
   list-style: none;
   padding: 0;
   text-align: center;

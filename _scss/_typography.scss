@@ -3,7 +3,7 @@ Typography
 ========================================================================== */
 
 body {
-  background-color: #ffffff;
+  background-color: $base3;
   color: $base03;
   font-family: "freight-text-pro", Georgia, "Times New Roman", Times, serif;
   font-size: 1em;
@@ -38,7 +38,7 @@ address {
 blockquote {
   margin: 0 auto;
   padding: 0 1em 0 0;
-  border-left: .25em solid $base3;
+  border-left: .25em solid $base2;
   color: $base00;
   max-width: 33em;
 }
@@ -52,7 +52,7 @@ code {
   padding: .125em .25em;
   font-style: normal;
   font-size: .875em;
-  background-color: $base3;
+  background-color: $base2;
   border-radius: .125em;
 }
 
@@ -124,7 +124,7 @@ h6 {
 }
 
 hr {
-  border-bottom: .125em solid $base3;
+  border-bottom: .125em solid $base2;
   border-left: 0;
   border-right: 0;
   border-top: 0;
@@ -183,7 +183,7 @@ pre samp {
 samp {
   padding: .125em .25em;
   font-size: .875em;
-  background-color: $base3;
+  background-color: $base2;
   border-radius: .125em;
 }
 
@@ -207,16 +207,19 @@ ol {
   max-width: 35.5em;
 }
 
+li > * {
+  padding-left: 0;
+}
+
 ul ol,
 ul ul,
 ol ol,
 ol ul {
   margin-bottom: 0;
+  padding-left: 1em;
 }
 
-li > * {
-  padding-left: 0;
-}
+
 
 /*var*/
 
@@ -276,7 +279,7 @@ td {
 }
 
 tbody tr:nth-child(odd) {
-  background: $base3;
+  background: #FFFFFF;
 }
 
 thead {

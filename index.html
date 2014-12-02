@@ -14,7 +14,7 @@ title: Home
     <div class="post-content">
       {% assign content = post.content | split: '<!-- more -->' %}
       {{ content[0] }}
-      {% if content[1] %}<a href="{{ site.url }}{{ post.url }}/#more">Read More</a>{% endif %}
+      {% if content[1] %}<p><a href="{{ site.url }}{{ post.url }}/#more">Read More</a></p>{% endif %}
     </div>
   </article>
 
