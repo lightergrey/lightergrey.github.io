@@ -1,37 +1,24 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8">
-    <title>{{ page.title }} | {{ site.title }}</title>
+    <title>{{ site.title }}</title>
     <link rel="shortcut icon" href="{{ site.url }}/favicon.ico">
     <meta name="description" content="{{ site.description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="{{ site.owner.name }}">
     <link rel="stylesheet" href="{{ site.url }}/css/style.min.css">
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ site.url }}/feed.xml">
     <script src="//use.typekit.net/zdp2muq.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
   </head>
   <body>
 
-    <header class="site-header" role="banner">
-      <div class="container">
-        <a class="site-title" href="{% if site.url %}{{ site.url }}{% else %}/{% endif %}">{{ site.title }}</a>
-      </div>
-    </header>
-
-    <div class="main" role="main">
+    <main class="main" role="main">
       {{ content }}
-    </div>
+    </main>
 
     <footer class="site-footer" role="contentinfo">
-      <div class="container">
-        <ul class="social-list">
-          <li class="social-item"><a class="social-link" href="http://twitter.com/josh_stewart">Twitter</a></li>
-          <li class="social-item"><a class="social-link" href="http://github.com/lightergrey">GitHub</a></li>
-        </ul>
-        <p class="copyright">© Copyright {{ site.owner.name }} {{ site.time | date: "%Y" }}</p>
-      </div>
+      <p class="copyright">© Copyright {{ site.owner.name }} {{ site.time | date: "%Y" }}</p>
     </footer>
 
     <script>

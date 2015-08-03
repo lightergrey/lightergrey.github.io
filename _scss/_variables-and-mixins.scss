@@ -15,23 +15,6 @@ $blue:      hsl(191, 100, 39);
 $cyan:      hsl(176, 90, 38);
 $green:     hsl(86, 54, 51);
 
-.base03 { background-color: $base03; color: $base2 }
-.base02 { background-color: $base02; color: $base2 }
-.base01 { background-color: $base01; color: $base2 }
-.base00 { background-color: $base00; color: $base2 }
-.base0 { background-color: $base0 }
-.base1 { background-color: $base1 }
-.base2 { background-color: $base2 }
-.base3 { background-color: $base3 }
-.yellow { background-color: $yellow }
-.orange { background-color: $orange }
-.red { background-color: $red }
-.magenta { background-color: $magenta }
-.violet { background-color: $violet }
-.blue { background-color: $blue }
-.cyan { background-color: $cyan }
-.green   { background-color: $green }
-
 %clearfix {
   &:after {
     content: "";
@@ -55,16 +38,4 @@ $green:     hsl(86, 54, 51);
   } @else {
     @media only screen and (min-width: $size) { @content; }
   }
-}
-
-.swatch-list {
-  @extend %no-bullet;
-  @extend %clearfix;
-}
-
-.swatch {
-  width: 20%;
-  float: left;
-  padding: 1em;
-
 }
