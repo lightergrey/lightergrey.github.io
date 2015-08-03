@@ -27,13 +27,13 @@ a:active {
   border-bottom: .125em solid $blue;
 }
 
-/*abbr*/
+// abbr
 
 address {
   font-style: normal;
 }
 
-/*b*/
+// b
 
 blockquote {
   margin: 0 auto;
@@ -43,10 +43,9 @@ blockquote {
   max-width: 33em;
 }
 
-blockquote cite {
-}
+// blockquote cite
 
-/*cite*/
+// cite
 
 code {
   padding: .125em .25em;
@@ -56,8 +55,8 @@ code {
   border-radius: .125em;
 }
 
-/*del*/
-/*dfn*/
+// del
+// dfn
 
 dl {
   max-width: 35em;
@@ -75,7 +74,7 @@ dd {
   margin-left: 1em;
 }
 
-/*em*/
+// em
 
 h1,
 h2,
@@ -132,8 +131,9 @@ hr {
   width: 25%;
 }
 
-/*i*/
-/*ins*/
+// i
+// ins
+
 kbd {
   padding: .125em .25em;
   font-size: .875em;
@@ -177,8 +177,8 @@ pre samp {
   background-color: transparent;
 }
 
-/*q*/
-/*s*/
+// q
+// s
 
 samp {
   padding: .125em .25em;
@@ -187,13 +187,13 @@ samp {
   border-radius: .125em;
 }
 
-/*small*/
-/*strong*/
-/*sub*/
-/*summary*/
-/*sup*/
-/*time*/
-/*u*/
+// small
+// strong
+// sub
+// summary
+// sup
+// time
+// u
 
 ul {
   list-style-type: disc;
@@ -219,17 +219,15 @@ ol ul {
   padding-left: 1em;
 }
 
+// var
 
-
-/*var*/
-
-/*::-moz-selection {
-text-shadow: none;
+::-moz-selection {
+  text-shadow: none;
 }
 
 ::selection {
-text-shadow: none;
-}*/
+  text-shadow: none;
+}
 
 figure,
 video {
