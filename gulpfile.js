@@ -9,6 +9,7 @@ var gulp = require('gulp'),
   minifyCss = require('gulp-minify-css'),
   notify = require('gulp-notify'),
   rename = require('gulp-rename'),
+  rev = require('gulp-rev'),
   sass = require('gulp-sass');
 
 
@@ -35,7 +36,7 @@ gulp.task('jekyll', ['styles'], function() {
 
 gulp.task('styles', function () {
 
-  del(['_site/css/*']);
+  del(['_site/css/*','css/*']);
 
   return gulp.src('_scss/style.scss')
     .pipe(sass())
@@ -43,8 +44,14 @@ gulp.task('styles', function () {
     .pipe(autoprefixer('last 1 version', 'ie 9', 'ie 10', 'ios 6'))
     .pipe(minifyCss())
     .pipe(rename({suffix: '.min'}))
+    .pipe(rev())
     .pipe(gulp.dest('_site/css/'))
     .pipe(gulp.dest('css/'))
+    .pipe(rev.manifest('_data/rev-manifest.json', {
+      base: '_data',
+      merge: true
+    }))
+    .pipe(gulp.dest('_data'))
     .pipe(browserSync.stream());
 });
 
