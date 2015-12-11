@@ -1,19 +1,46 @@
-$base03:    hsl(195, 90, 5);
-$base02:    hsl(195, 60, 10);
-$base01:    hsl(195, 30, 25);
-$base00:    hsl(195, 20, 35);
-$base0:     hsl(195, 10, 50);
-$base1:     hsl(195, 10, 70);
-$base2:     hsl(195, 5, 87);
-$base3:     hsl(195, 5, 95);
-$yellow:    hsl(50, 86, 51);
-$orange:    hsl(30, 86, 51);
-$red:       hsl(351, 72, 51);
-$magenta:   hsl(323, 40, 49);
-$violet:    hsl(281, 43, 39);
-$blue:      hsl(191, 100, 39);
-$cyan:      hsl(176, 90, 38);
-$green:     hsl(86, 54, 51);
+//
+// Variables and Mixins
+// ============================================================================
+// Settings used in other Sass files
+//
+
+// Colors
+// ----------------------------------------------------------------------------
+$base03:           hsl(195, 90, 5);
+$base02:           hsl(195, 60, 10);
+$base01:           hsl(195, 30, 25);
+$base00:           hsl(195, 20, 35);
+$base0:            hsl(195, 10, 50);
+$base1:            hsl(195, 10, 70);
+$base2:            hsl(195, 5, 87);
+$base3:            hsl(195, 5, 95);
+$yellow:           hsl(50, 86, 51);
+$orange:           hsl(30, 86, 51);
+$red:              hsl(351, 72, 51);
+$magenta:          hsl(323, 40, 49);
+$violet:           hsl(281, 43, 39);
+$blue:             hsl(191, 100, 39);
+$cyan:             hsl(176, 90, 38);
+$green:            hsl(86, 54, 51);
+
+
+// Settings
+// ----------------------------------------------------------------------------
+
+$background-color: $base2;
+$color:            $base03;
+$color--link:      $blue;
+
+$font-family:      'Source Serif Pro', Georgia, 'Times New Roman', Times, serif;
+$font-family--alt: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-size:        1em;
+$line-height:      1.4;
+$line-height--em:  ($line-height * 1em);
+$max-width:        35em;
+
+
+// Mixins and Extendables
+// ----------------------------------------------------------------------------
 
 %clearfix {
   &:after {
@@ -25,9 +52,7 @@ $green:     hsl(86, 54, 51);
 
 %no-bullet {
   list-style-type: none;
-  margin: 0;
-  max-width: none;
-  padding: 0;
+  padding-left: $font-size;
 }
 
 @mixin bp($size) {

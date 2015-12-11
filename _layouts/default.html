@@ -1,34 +1,35 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8">
-    <title>{{ page.title ? page.title + '|' }}{{ site.title }}</title>
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <link rel="shortcut icon" href="{{ site.url }}/favicon.ico">
     <meta name="description" content="{{ site.description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="{{ site.owner.name }}">
     <link rel="stylesheet" href="{{ site.url }}/css/{{ site.data.rev-manifest['style.min.css'] }}">
+    <link rel="home" href="{{ site.url }}/">
   </head>
   <body>
 
     <header class="site-header" role="banner">
-      <div class="container">
-        <a class="site-title" href="{% if site.url %}{{ site.url }}{% else %}/{% endif %}">{{ site.title }}</a>
-      </div>
+      <h1 class="site-title">{{ site.title }}</h1>
     </header>
 
-    <div class="main" role="main">
+    <main class="site-main" role="main">
       {{ content }}
-    </div>
+    </main>
 
     <footer class="site-footer" role="contentinfo">
-      <div class="container">
-        <ul class="social-list">
-          <li class="social-item"><a class="social-link" href="http://twitter.com/josh_stewart">Twitter</a></li>
-          <li class="social-item"><a class="social-link" href="http://github.com/lightergrey">GitHub</a></li>
-        </ul>
-        <p class="copyright">© Copyright {{ site.owner.name }} {{ site.time | date: "%Y" }}</p>
-      </div>
+      <ul class="list-internet">
+        <li>
+          <a href="http://twitter.com/josh_stewart">Twitter</a>
+        </li>
+        <li>
+          <a href="http://github.com/lightergrey">GitHub</a>
+        </li>
+      </ul>
+      <p class="copyright"><small>© Copyright {{ site.owner.name }} {{ site.time | date: '%Y' }}</small></p>
     </footer>
 
     <script>
