@@ -1,79 +1,52 @@
-/* ==========================================================================
-Typography
-========================================================================== */
+//
+// Base styles
+// ============================================================================
+// Styles for base html elements. NO CLASSES ALLOWED!
+//
+
+
+// Typography
+// ----------------------------------------------------------------------------
+
+// html
 
 body {
-  background-color: $base3;
-  color: $base03;
-  font-family: "freight-text-pro", Georgia, "Times New Roman", Times, serif;
-  font-size: 1em;
-  line-height: 1.4;
+  background-color: $background-color;
+  color: $color;
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
   width: 100%;
 
   @include bp(medium) {
-    font-size: 1.125em;
+    font-size: $font-size * 1.125;
   }
 }
 
 a,
 a:visited {
-  color: $blue;
+  color: $color--link;
   text-decoration: none;
 }
 
 a:hover,
 a:active {
-  color: $blue;
-  border-bottom: .125em solid $blue;
+  color: $color--link;
+  text-decoration: underline;
 }
 
 // abbr
-
-address {
-  font-style: normal;
-}
-
+// address
 // b
-
-blockquote {
-  margin: 0 auto;
-  padding: 0 1em 0 0;
-  border-left: .25em solid $base2;
-  color: $base00;
-  max-width: 33em;
-}
-
+// blockquote
 // blockquote cite
-
 // cite
-
-code {
-  padding: .125em .25em;
-  font-style: normal;
-  font-size: .875em;
-  background-color: $base2;
-  border-radius: .125em;
-}
-
+// code
 // del
 // dfn
-
-dl {
-  max-width: 35em;
-  margin: 0 auto 1em auto;
-  padding: 0 1em;
-}
-
-dt {
-  font-weight: bold;
-  font-style: italic;
-}
-
-dd {
-  margin-bottom: .5em;
-  margin-left: 1em;
-}
-
+// dl
+// dt
+// dd
 // em
 
 h1,
@@ -85,108 +58,91 @@ h6 {
   font-weight: bold;
   line-height: 1.25;
   text-rendering: optimizeLegibility;
-  margin: 1.5em auto .5em auto;
-  font-family: "freight-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: $base02;
+  margin-top: 1.5em;
+  margin-right: auto;
+  margin-bottom: .5em;
+  margin-left: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: $font-family--alt;
+  color: $color;
 
   a,
   a:visited {
-    color: $base02;
+    color: $color--link;
   }
 }
 
 h1 {
   font-size: 2.25em;
-  max-width: 15.555555556em;
-  padding: 0 .444444444em;
+  max-width: $max-width / 2.25;
+  padding-right: $font-size / 2.25;
+  padding-left: $font-size / 2.25;
 }
 
 h2 {
   font-size: 1.75em;
-  max-width: 20em;
-  padding: 0 .571428571em;
+  max-width: $max-width / 1.75;
+  padding-right: $font-size / 1.75;
+  padding-left: $font-size / 1.75;
 }
 
 h3 {
   font-size: 1.25em;
-  max-width: 28em;
-  padding: 0 .8em;
+  max-width: $max-width / 1.25;
+  padding-right: $font-size / 1.25;
+  padding-left: $font-size / 1.25;
 }
 
 h4,
 h5,
 h6 {
-  font-size: 1em;
+  font-size: $font-size;
   margin-bottom: 0;
-  padding: 0 1em;
-  max-width: 35em;
+  padding-right: $font-size;
+  padding-left: $font-size;
+  max-width: $max-width;
 }
 
 hr {
-  border-bottom: .125em solid $base2;
+  border-bottom: .125em solid $base1;
   border-left: 0;
   border-right: 0;
   border-top: 0;
-  margin: 2em auto;
+  margin-top: $font-size * 2;
+  margin-right: auto;
+  margin-bottom: $font-size * 2;
+  margin-left: auto;
   width: 25%;
 }
 
 // i
 // ins
-
-kbd {
-  padding: .125em .25em;
-  font-size: .875em;
-  background-color: $base2;
-  border-radius: .125em;
-}
-
-mark {
-  background-color: $yellow;
-  padding: .0625em .125em;
-}
+// kbd
+// mark
 
 ol {
   list-style-type: decimal;
-  margin: 0 auto 1em;
-  padding: 0 1em 0 2em;
-  max-width: 35em;
 }
 
 p {
-  margin: 0 auto 1em auto;
-  max-width: 35em;
-  padding: 0 1em;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: $font-size;
+  margin-left: auto;
+  max-width: $max-width;
+  padding-top: 0;
+  padding-right: $font-size;
+  padding-bottom: 0;
+  padding-left: $font-size;
 }
 
-pre {
-  padding: 1em;
-  background-color: $base03;
-  color: $base1;
-  border-radius: .125em;
-  max-width: 33em;
-  margin: 1em;
-  @include bp(35em) {
-    margin: 1em auto;
-  }
-}
-
-pre code,
-pre samp {
-  padding: 0;
-  background-color: transparent;
-}
-
+// pre
+// pre code
+// pre samp
 // q
 // s
-
-samp {
-  padding: .125em .25em;
-  font-size: .875em;
-  background-color: $base2;
-  border-radius: .125em;
-}
-
+// samp
 // small
 // strong
 // sub
@@ -197,14 +153,19 @@ samp {
 
 ul {
   list-style-type: disc;
-  margin: 0 auto 1em;
-  padding: 0 1em 0 2em;
-  max-width: 35em;
 }
 
-ul,
-ol {
-  max-width: 35.5em;
+ol,
+ul {
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: $font-size;
+  margin-left: auto;
+  padding-top: 0;
+  padding-right: $font-size;
+  padding-bottom: 0;
+  padding-left: $font-size * 2;
+  max-width: $max-width;
 }
 
 li > * {
@@ -216,7 +177,7 @@ ul ul,
 ol ol,
 ol ul {
   margin-bottom: 0;
-  padding-left: 1em;
+  padding-left: $font-size;
 }
 
 // var
@@ -229,26 +190,44 @@ ol ul {
   text-shadow: none;
 }
 
-figure,
-video {
-  max-width: 35em;
-  padding: 0 1em;
-  margin: 0 auto;
+
+// Media
+// ----------------------------------------------------------------------------
+
+figure {
+  max-width: $max-width;
+  padding-top: 0;
+  padding-right: $font-size;
+  padding-bottom: 0;
+  padding-left: $font-size;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
   display: block;
 }
 
-img,
-video {
+img {
+  display: block;
   max-width: 100%;
-  margin: 0 auto;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: $font-size;
+  margin-left: auto;
   height: auto;
 }
 
+// video
+
 figcaption {
   color: $base0;
+  font-family: $font-family--alt;
   font-style: italic;
-  max-width: 35em;
-  margin: 0 auto 1em;
+  max-width: $max-width;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: $font-size;
+  margin-left: auto;
   padding: 0;
 
   > * {
@@ -259,31 +238,19 @@ figcaption {
   }
 }
 
-form {
-  max-width: 35em;
-  padding: 0 1em;
-  margin: 0 auto 1em auto;
-}
 
-table {
-  max-width: 35em;
-  padding: 0 1em;
-  margin: 0 auto 1em auto;
-}
+// Forms
+// ----------------------------------------------------------------------------
 
-th,
-td {
-  padding: .25em .75em;
-}
+// form
 
-tbody tr:nth-child(odd) {
-  background: #FFFFFF;
-}
 
-thead {
-  font-weight: bold;
-}
+// Tables
+// ----------------------------------------------------------------------------
 
-tfoot {
-  font-style: italic;
-}
+// table
+// th
+// td
+// tbody
+// thead
+// tfoot

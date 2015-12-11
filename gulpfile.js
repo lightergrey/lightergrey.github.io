@@ -1,55 +1,59 @@
 'use strict';
 
 var gulp = require('gulp'),
-  browserSync = require('browser-sync'),
-  reload = browserSync.reload,
-  cp = require('child_process'),
-  prefix = require('gulp-autoprefixer'),
-  cssmin = require('gulp-cssmin'),
+  autoprefixer = require('gulp-autoprefixer'),
+  browserSync = require('browser-sync').create(),
+  notify = require('gulp-notify'),
+  del = require('del'),
+  gutil = require('gulp-util'),
+  minifyCss = require('gulp-minify-css'),
+  notify = require('gulp-notify'),
   rename = require('gulp-rename'),
+  rev = require('gulp-rev'),
   sass = require('gulp-sass');
 
 
-gulp.task('jekyll-build', function (done) {
-  browserSync.notify('<span style="color: grey">Running:</span> $ jekyll build');
-  return cp.spawn('jekyll', ['build','--config', '_config.yml,_config-dev.yml'], {stdio: 'inherit'})
-  .on('close', done);
-});
-
-gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
-  browserSync.reload();
-});
-
-gulp.task('browser-sync', ['jekyll-build'], function() {
-  browserSync({
+gulp.task('serve', ['styles'], function() {
+  browserSync.init({
     logLevel: 'info',
     logConnections: false,
     logFileChanges: true,
-    server: {
-      baseDir: '_site'
-    }
+    server: '_site'
+  });
+
+  gulp.watch('_scss/*.scss', ['styles']);
+  gulp.watch('_site/*').on('change', browserSync.reload);
+});
+
+
+gulp.task('jekyll', ['styles'], function() {
+  var spawn = require('child_process').spawn;
+  var jekyll = spawn('bundle', ['exec', 'jekyll', 'serve', '--config', '_config.yml,_config-dev.yml'], {
+    stdio: 'inherit'
   });
 });
 
-gulp.task('sass', function () {
+
+gulp.task('styles', function () {
+
+  del(['_site/css/*','css/*']);
+
   return gulp.src('_scss/style.scss')
-  .pipe(sass({
-    includePaths: ['scss'],
-    onError: browserSync.notify
-  }))
-  .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-  .pipe(cssmin())
-  .pipe(rename({suffix: '.min'}))
-  .pipe(gulp.dest('_site/css'))
-  .pipe(browserSync.reload({stream:true}))
-  .pipe(gulp.dest('css/'));
+    .pipe(sass())
+    .on('error', notify.onError())
+    .pipe(autoprefixer('last 1 version', 'ie 9', 'ie 10', 'ios 6'))
+    .pipe(minifyCss())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(rev())
+    .pipe(gulp.dest('_site/css/'))
+    .pipe(gulp.dest('css/'))
+    .pipe(rev.manifest('_data/rev-manifest.json', {
+      base: '_data',
+      merge: true
+    }))
+    .pipe(gulp.dest('_data'))
+    .pipe(browserSync.stream());
 });
 
-gulp.task('watch', function () {
-  gulp.watch('_scss/*.scss', ['sass']);
-  gulp.watch(['index.html', '_layouts/*.html', '_posts/*', '_drafts/*'], ['jekyll-rebuild']);
-});
 
-gulp.task('default', ['browser-sync'], function() {
-  gulp.start('watch');
-});
+gulp.task('default', ['serve', 'jekyll']);
