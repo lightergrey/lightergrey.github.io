@@ -43,15 +43,21 @@ gulp.task('styles', function () {
     .on('error', notify.onError())
     .pipe(autoprefixer('last 1 version', 'ie 9', 'ie 10', 'ios 6'))
     .pipe(minifyCss())
-    .pipe(rename({suffix: '.min'}))
-    .pipe(rev())
-    .pipe(gulp.dest('_site/css/'))
-    .pipe(gulp.dest('css/'))
-    .pipe(rev.manifest('_data/rev-manifest.json', {
-      base: '_data',
-      merge: true
-    }))
-    .pipe(gulp.dest('_data'))
+    
+    // Uncomment for the linked CSS version
+    // .pipe(rename({suffix: '.min'}))
+    // .pipe(rev())
+    // .pipe(gulp.dest('_site/css/'))
+    // .pipe(gulp.dest('css/'))
+    // .pipe(rev.manifest('_data/rev-manifest.json', {
+    //   base: '_data',
+    //   merge: true
+    // }))
+    // .pipe(gulp.dest('_data'))
+
+    // Inlined CSS Version
+    .pipe(gulp.dest('_includes/'))
+
     .pipe(browserSync.stream());
 });
 
