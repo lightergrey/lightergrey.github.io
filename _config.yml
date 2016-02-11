@@ -10,7 +10,7 @@ owner:
   name: Josh Stewart
 
 exclude: [Gemfile, Gemfile.lock, gulpfile.js, node_modules, package.json, README.md]
-permalink: /:title
+permalink: /:title/
 
 gems:
   - jekyll-sitemap
