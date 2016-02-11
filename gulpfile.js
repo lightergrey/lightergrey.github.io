@@ -6,7 +6,7 @@ var gulp = require('gulp'),
   notify = require('gulp-notify'),
   del = require('del'),
   gutil = require('gulp-util'),
-  minifyCss = require('gulp-minify-css'),
+  cssnano = require('gulp-cssnano'),
   notify = require('gulp-notify'),
   rename = require('gulp-rename'),
   rev = require('gulp-rev'),
@@ -28,7 +28,7 @@ gulp.task('serve', ['styles'], function() {
 
 gulp.task('jekyll', ['styles'], function() {
   var spawn = require('child_process').spawn;
-  var jekyll = spawn('bundle', ['exec', 'jekyll', 'serve', '--config', '_config.yml,_config-dev.yml'], {
+  var jekyll = spawn('bundle', ['exec', 'jekyll', 'serve', '--config', '_config.yml,_config-dev.yml', '--profile', '--incremental'], {
     stdio: 'inherit'
   });
 });
@@ -42,8 +42,8 @@ gulp.task('styles', function () {
     .pipe(sass())
     .on('error', notify.onError())
     .pipe(autoprefixer('last 1 version', 'ie 9', 'ie 10', 'ios 6'))
-    .pipe(minifyCss())
-    
+    .pipe(cssnano())
+
     // Uncomment for the linked CSS version
     // .pipe(rename({suffix: '.min'}))
     // .pipe(rev())
